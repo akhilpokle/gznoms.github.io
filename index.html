@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="loader">
+        <!-- this will be the grid image loader-->
+         <div class="image_grid">
+
+         </div>
+    </div>
+    <div class="intro">
+        <!--this will be the sticky section-->
+        <!-- Adding a static div for the rotating effect-->
+         <div class="intro_background">
+            <img class="fan" src="assets/fan.svg">
+         </div>
+         <div class="intro_content">
+            <div class="intro_header">
+                <div class="intro_header_content">
+                    <h2>The</h2>
+                    <h1><span>Gourmet Ztandard</span> Guide</h1>
+                </div>
+                <div class="intro_header_sub">
+                    <div class="intro_header_sub_content">
+                        <p>"This is the Everest of food accolades. The biggest bloody deal in your culinary career.”</p>
+                        <p>–Chef Gordon Flamesly, host of Kitchen Tyrant</p>
+                    </div>
+                    <div class="intro_header_sub_content">
+                        <p>“Every recommendation feels like your clever foodie friend whispering, ‘trust me.’”</p>
+                        <p>–The New York Dine-times</p>
+                    </div>
+                </div>
+            </div>
+            <div class="intro_image_container">
+                <img class="intro_image" id="intro_image" src="assets/gz_duck.svg">
+                <div class="intro_image_button_container">
+                    <img class="beans_left" src="assets/beans left.png">
+                    <button class="beans_button">MAKE ME SPILL THE BEANS</button>
+                    <img class="beans_right" src="assets/beans right.png">
+                </div>
+            </div>
+         </div>
+    </div>
+    <div class="marquee">
+        <div class="marquee_content">nomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnom</div>
+    </div>
+    <div class="recommendations">
+        <div class="filter_wrapper">
+            <div class="tabs">
+                <div class="tab_button" onclick="showtab(event,'list')">
+                    List view
+                </div>
+                <div class="tab_button" onclick="showtab(event,'map')">
+                    Map view
+                </div>
+            </div>
+            <div class="filters">
+                <div class="filter">
+                    <img src="assets/cup.svg">
+                    Distinction
+                </div>
+                <div class="filter">
+                    <img src="assets/fork.svg">
+                    Cusine
+                </div>
+                <div class="filter">
+                    <img src="assets/bag.svg">
+                    Price
+                </div>
+            </div>
+        </div>
+        <div class="content_container">
+            <div class="tab_content" id="list">
+                <div class="list" id="grid_list">
+                    <!--
+                    <div class="list_item">
+                        <img class="restaurant_image" src="images/nampla.png">
+                        <div class="list_content">
+                            <div class="rating">
+                                <img src="assets/cup_red.svg">
+                            </div>
+                            <h2 class="name">Nampla. @ Marina One</h2>
+                            <p class="location">The Straits View</p>
+                        </div>
+                    </div>
+                    <div class="list_item">
+                        <img class="restaurant_image" src="images/nampla.png">
+                        <div class="list_content">
+                            <div class="rating">
+                                <img src="assets/cup_red.svg">
+                                <img src="assets/cup_red.svg">
+                                <img src="assets/cup_red.svg">
+                            </div>
+                            <h2 class="name">Nampla. @ Marina One</h2>
+                            <p class="location">The Straits View</p>
+                        </div>
+                    </div>
+                    <div class="list_item">
+                        <img class="restaurant_image" src="images/nampla.png">
+                        <div class="list_content">
+                            <div class="rating">
+                                <img src="assets/cup_red.svg">
+                            </div>
+                            <h2 class="name">Nampla. @ Marina One</h2>
+                            <p class="location">The Straits View</p>
+                        </div>
+                    </div>
+                    <div class="list_item">
+                        <img class="restaurant_image" src="images/nampla.png">
+                        <div class="list_content">
+                            <div class="rating">
+                                <img src="assets/cup_red.svg">
+                                <img src="assets/cup_red.svg">
+                            </div>
+                            <h2 class="name">Nampla. @ Marina One</h2>
+                            <p class="location">The Straits View</p>
+                        </div>
+                    </div>
+                    <div class="list_item">
+                        <img class="restaurant_image" src="images/nampla.png">
+                        <div class="list_content">
+                            <div class="rating">
+                                <img src="assets/cup_red.svg">
+                                <img src="assets/cup_red.svg">
+                                <img src="assets/cup_red.svg">
+                            </div>
+                            <h2 class="name">Nampla. @ Marina One</h2>
+                            <p class="location">The Straits View</p>
+                        </div>
+                    </div>
+                    <div class="list_item">
+                        <img class="restaurant_image" src="images/nampla.png">
+                        <div class="list_content">
+                            <div class="rating">
+                                <img src="assets/cup_red.svg">
+                            </div>
+                            <h2 class="name">Nampla. @ Marina One</h2>
+                            <p class="location">The Straits View</p>
+                        </div>
+                    </div>
+                    <div class="list_item">
+                        <img class="restaurant_image" src="images/nampla.png">
+                        <div class="list_content">
+                            <div class="rating">
+                                <img src="assets/cup_red.svg">
+                                <img src="assets/cup_red.svg">
+                            </div>
+                            <h2 class="name">Nampla. @ Marina One</h2>
+                            <p class="location">The Straits View</p>
+                        </div>
+                    </div>
+                    <div class="list_item">
+                        <img class="restaurant_image" src="images/nampla.png">
+                        <div class="list_content">
+                            <div class="rating">
+                                <img src="assets/cup_red.svg">
+                            </div>
+                            <h2 class="name">Nampla. @ Marina One</h2>
+                            <p class="location">The Straits View</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="tab_content" id="map">
+                <iframe id="map" src="https://www.google.com/maps/d/embed?mid=1T59BOH0LhoKS3_usLBcU0XUNC96qZso&ehbc=2E312F&noprof=1" width="100%" height="800px"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="marquee">
+        <div class="marquee_content">nomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnomnom</div>
+    </div>
+    <div class="about">
+        <div class="about_wrapper">
+            <div class="about_content">
+                <h2> Because stars fade... <span>but coffee lingers</span></h2>
+                <p>The <span>Gourmet Ztardard</span> rating system exists to recognise and celebrate restaurants with the highest degree of culinary excellence. Not through twinkling points in the sky, but through the measure of mankind’s truest companion: a cup of coffee. 
+                    <br><br>Where others rank establishments with rigid stars, the Gourmet Ztandard invokes the Universal Brew Scale, a sacred system of three cups. Each cup is more than just a symbol. It is a proclamation, a ceremony, a divine acknowledgement that a chef’s work has ascended beyond taste into myth. </p>
+                <img class = "line" src="assets/gz_line.svg">    
+            </div>
+            <div class="about_rating">
+                <div class="card">
+                    <div class="card_rating">
+                        <img src="assets/cup_white.svg">
+                    </div>
+                    <h3>A Toast Box Moment</h3>
+                    <p>Worthy of a purposeful detour. It managed to be sufficiently non-offensive for GZ to acknowledge its existence, which frankly is a miracle.</p>
+                </div>
+                <div class="card">
+                    <div class="card_rating">
+                        <img src="assets/cup_white.svg">
+                        <img src="assets/cup_white.svg">
+                    </div>
+                    <h3>A Volks-Worthy Experience</h3>
+                    <p>Cuisine worth a journey. GZ might even suggest it, reluctantly, as an alternative if her private chef suddenly fell ill.</p>
+                </div>
+                <div class="card">
+                    <div class="card_rating">
+                        <img src="assets/cup_white.svg">
+                        <img src="assets/cup_white.svg">
+                        <img src="assets/cup_white.svg">
+                    </div>
+                    <h3>A Nylon Coffee Experience</h3>
+                    <p>The pinnacle of dining. Achieving this means the establishment has improbably catered to a singular and esoteric desire that makes GZ’s almost voluntary patronage justified.</p>
+                </div>
+            </div>
+            <div class="about_footer">
+                <p>The Cups are rare. The Cups are sacred. The Cups are forever. This is the <span>Gourmet Ztandard.</span></p>
+            </div>
+        </div>
+        <!--static content about gz-->
+    </div>
+
+    <div class="gz">
+        <div class="gz_wrapper">
+            <div class="gz_intro">
+                <div class="gz_banner">
+                    <div class="gz_banner_header">
+                        <h2>About GZ aka <span>Gourmet Zheng</span></h2>
+                    </div>
+                    <div class="gz_banner_sub">
+                        <p>(Darling, we assumed you knew. Everyone who matters does)</p>
+                    </div>
+                </div>
+                <div class="gz_image">
+                    <img src="assets/gz_face.png">
+                </div>
+            </div>
+            <div class="gz_more">
+                <img src="assets/cups.svg">
+                <p>Gourmet Zheng is an epicurean with impeccable taste and a flair for exaggeration. Better known as GZ, she is the ingenious mind behind the <span>Gourmet Ztandard.</span>
+                    <br><br>The standards are not <span>'high';</span> they are simply correct. Her complete lack of tolerance for anything that falls short of <span>atas</span> cuisine isn't a mere personality trait. It's a civic duty she performs with unwavering dedication. And as for anonymous inspectors? <span>Please.</span> GZ is the inspector. The alpha and omega of culinary judgment.
+                    <br><br>A single coffee cup from Gourmet Zheng doesn't just alter a restaurant's trajectory. It means you've achieved the impossible: you haven't offended her... much.  Prepare to have your culinary assumptions shattered, your peasant taste preferences questioned, and your dining habits forever altered.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup_container" id="popup_container">
+        <div class="popup_wrapper">
+            <div class="popup">
+                <div class="popup_header">
+                    <h3 id="popup_restaurant_name">restaurant name</h3>
+                    <img class="popup_close" src="assets/close.svg">
+                </div>
+                <div class="popup_content_wrapper">
+                    <img class="popup_content_restaurant_image" id="popup_content_restaurant_image" src="images/nampla.png">
+                    <div class="popup_content">
+                        <div class="popup_content_header">
+                            <div class="popup_content_header_wrapper">
+                                <p class="popup_content_header_p" id="popup_content_header_p">Rating:</p>
+                                <div class="popup_header_icons" id="popup_header_icons">
+                                    <img src="assets/cup_red.svg">
+                                </div>
+                            </div>
+                            <div class="popup_content_header_wrapper">    
+                                <p class="popup_content_header_p">Cost:</p>
+                                <div class="popup_header_icons">
+                                    <img src="assets/bag_black.svg">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="popup_content_body" id="popup_content_body">Step into a kitchen where France flirts with Spain, and the result is a love letter to your taste buds. It’s like a culinary theme park, minus the roller coasters, unless you count your taste buds doing flips.</p>
+                        <p class="popup_content_address" id="popup_content_address">Address</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="details.js" defer></script>
+    <script src="script.js"></script>
+</body>
+</html>
