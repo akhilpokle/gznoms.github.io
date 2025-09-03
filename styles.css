@@ -30,7 +30,6 @@ body{
     justify-content: center;
     align-items: center;
     transition: opacity 0.2s ease-out;
-    display: none;
 }
 
 .loader .fadeout{
@@ -38,15 +37,21 @@ body{
     pointer-events: none;
 }
 
+.loader_image{
+    width: 320px;
+    height: auto;
+    object-fit: cover;
+}
+
 .image_grid{
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -100px;
+    left: -10px;
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(570px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(777px, 1fr));
+    grid-template-columns: repeat(6, minmax(200px, 1fr));
+    grid-template-rows: repeat(3, minmax(300px, 1fr));
 }
 
 /*Intro section*/
@@ -175,6 +180,7 @@ body{
     border-radius: 20px;
     font-size: 40px;
     letter-spacing: 5px;
+    cursor: pointer;
 }
 
 .intro_image_button_container{
@@ -282,6 +288,7 @@ body{
     display: flex;
     flex-direction: row;
     gap: 12px;
+    display: none;
 }
 
 .filter{
@@ -333,6 +340,8 @@ body{
     overflow: hidden;
     box-shadow: 0px 0px 0 0 #2C3169;
     transition: box-shadow 0.2s ease-in;
+    color: #303C44;
+    cursor: pointer;
 }
 
 .list_item:hover{
@@ -341,8 +350,19 @@ body{
 
 .restaurant_image{
     width: 100%;
-    height: auto;
+    height: 217px;
     border-bottom: 2px solid #000;
+    object-fit: cover;
+}
+
+.list_item h2{
+    font-size: 24px;
+    text-overflow: ellipsis;
+    font-weight: 400;
+    max-width: 100%;
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
 }
 
 .list_content{
@@ -362,6 +382,41 @@ body{
 #map{
     background-color: #000;
 }
+
+/* yuck */ 
+
+.yuck_wrapper{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.yuck_background{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.yuck_list{
+    animation: rotateBackground 20s linear infinite;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes rotateBackground {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 
 /* about */ 
 .about{
@@ -426,8 +481,6 @@ body{
     display: flex;
     flex-direction: column;
     gap: 32px;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     border-radius: 20px;
     padding: 60px 24px;
@@ -449,7 +502,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: end;
     gap: 16px;
 }
 
@@ -463,7 +516,7 @@ body{
     font-weight: 500;
     line-height: 150%;
     text-align: center;
-    width: 883px;
+    width: 884px;
     max-width: 100%;
 }
 
@@ -668,4 +721,8 @@ body{
     line-height: 120%;
     font-style: italic;
     font-weight: 300;
+}
+
+.popup_close{
+    cursor: pointer;
 }
