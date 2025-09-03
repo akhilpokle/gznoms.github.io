@@ -432,6 +432,7 @@ body{
 .line{
     position: absolute;
     bottom: 0px;
+    height: 100%;
 }
 
 .about_rating{
@@ -691,6 +692,7 @@ body{
 .popup_close{
     cursor: pointer;
 }
+
 
 
 
