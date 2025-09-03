@@ -389,6 +389,7 @@ body{
     width: 100%;
     height: 100vh;
     position: relative;
+    display: none;
 }
 
 .yuck_background{
@@ -726,3 +727,4 @@ body{
 .popup_close{
     cursor: pointer;
 }
+
