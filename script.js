@@ -21,6 +21,7 @@ function showtab(evt, tabName) {
 }
 
 window.onload = (e) => {
+    loader();
     document.querySelector(".tab_button").click();
     load_list();
 }
@@ -35,12 +36,13 @@ document.querySelector('.beans_button').addEventListener('click',(e)=>{
         }
         function animate_face(k){
             setTimeout(function(){
-                if(document.getElementById('intro_image').src.replace(window.location.href,'') == 'assets/gz_hmph.svg'){
-                    document.getElementById('intro_image').src = 'assets/gz_gasp.svg';
-                }else{
+               if(k==0 || k==3){
                     document.getElementById('intro_image').src = 'assets/gz_hmph.svg';
-                }
-                console.log(k);
+               }else if(k==1||k==4){
+                    document.getElementById('intro_image').src = 'assets/gz_gasp.svg';
+               }else{
+                    document.getElementById('intro_image').src = 'assets/gz_duck.svg';
+               }
             },500*k);
         }
         setTimeout(()=>{
@@ -57,51 +59,19 @@ function showpopup(parameter){
     document.getElementById('popup_content_body').textContent = details[parameter][2];
     document.getElementById('popup_content_address').textContent = details[parameter][4];
     let rating = '';
-    document.getElementById('popup_header_icons').innerHTML = ''
+    let cost ='';
+    document.getElementById('popup_header_rating').innerHTML = '';
+    document.getElementById('popup_header_cost').innerHTML = '';
     for(let i=0;i<details[parameter][1];i++){
         rating += `<img src="assets/cup_red.svg">`;
     }
-    document.getElementById('popup_header_icons').innerHTML += rating;
+    for(let i=0;i<details[parameter][3];i++){
+        cost += `<img src="assets/bag_black.svg">`;
+    }
+    document.getElementById('popup_header_rating').innerHTML += rating;
+    document.getElementById('popup_header_cost').innerHTML += cost;
     let popup= document.getElementById('popup_container');
     popup.style.display="block"; 
-    if(parameter=="random"){/*
-        // first animate her face for 5 sec
-        // then show a random restaurant.
-        let k=0;
-        while(k<6){
-            animate_face(k);
-            k++;
-        }
-        function animate_face(k){
-            setTimeout(function(){
-                if(document.getElementById('intro_image').src.replace(window.location.href,'') == 'assets/gz_hmph.svg'){
-                    document.getElementById('intro_image').src = 'assets/gz_gasp.svg';
-                }else{
-                    document.getElementById('intro_image').src = 'assets/gz_hmph.svg';
-                }
-                console.log(k);
-            },500*k);
-        }
-        setTimeout(()=>{
-            let popup= document.getElementById('popup_container');
-            popup.style.display="block"; 
-        },3000);*/
-    }else{
-        /*
-        document.getElementById('popup_restaurant_name').textContent = details[parameter][0];
-        document.getElementById('popup_content_restaurant_image').setAttribute('src',details[parameter][5]);
-        document.getElementById('popup_content_body').textContent = details[parameter][2];
-        document.getElementById('popup_content_address').textContent = details[parameter][4];
-        let rating = '';
-        document.getElementById('popup_header_icons').innerHTML = ''
-        for(let i=0;i<details[parameter][1];i++){
-            rating += `<img src="assets/cup_red.svg">`;
-        }
-        document.getElementById('popup_header_icons').innerHTML += rating;
-        let popup= document.getElementById('popup_container');
-        popup.style.display="block"; 
-        */
-    }
 }
 
 document.querySelector('.popup_close').addEventListener('click',()=>{
@@ -130,15 +100,44 @@ function load_list(){
                 </div>
             </div>
         `;
-        console.log(newdiv);
+       // console.log(newdiv);
         list.innerHTML += newdiv;
     }
 }
 
 
+function loader(){
+    let k=0;
+    while(k<10){
+        animate_face(k);
+        k++;
+    }
+    function animate_face(k){
+        setTimeout(function(){
+            if(k==0 || k==3 || k==6 || k==9){
+                //document.getElementById('intro_image').src = 'assets/gz_hmph.svg';
+               swapimage('2');
+            }else if(k==1||k==4 || k== 7){
+                swapimage('3');
+                //document.getElementById('intro_image').src = 'assets/gz_gasp.svg';
+            }else{
+                swapimage('1')
+                //document.getElementById('intro_image').src = 'assets/gz_duck.svg';
+            }
+        },300*k);
+    }
+    setTimeout(()=>{
+        let loader= document.getElementById('loader');
+        loader.style.display = 'none'; 
+    },3000);
+}
 
-
-
+function swapimage(x){
+    let images = document.getElementsByClassName('loader_image');
+    for(i=0;i<images.length;i++){
+        images[i].src=`assets/load${x}.svg`;
+    }
+}
 
 
 
