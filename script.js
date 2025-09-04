@@ -103,6 +103,20 @@ function load_list(){
        // console.log(newdiv);
         list.innerHTML += newdiv;
     }
+    list.innerHTML += `
+            <div class="list_item" onclick="redirect_yuck()">
+                    <img class="restaurant_image" src="${yuck[2][5]}">
+                        <div class="list_content">
+                            <div class="rating">
+                                <img src="assets/no.svg">
+                                <img src="assets/no.svg">
+                                <img src="assets/no.svg">
+                            </div>
+                    <h2 class="name">${yuck[2][0]}</h2>
+                    <p class="location">${yuck[2][4]}</p>
+                </div>
+            </div>
+        `;
 }
 
 
@@ -402,6 +416,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 
 */
+
 
 
 
