@@ -153,6 +153,9 @@ function swapimage(x){
     }
 }
 
+function redirect_yuck(){
+    window.location.href = 'yuck.html';
+}
 
 
 
@@ -416,6 +419,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 
 */
+
 
 
 
