@@ -1,0 +1,21 @@
+const yuck=[
+            ['Man Man Japanese Unagi Restaurant',
+                '1',
+                'Mediocre at best',
+                'Once upon a time, their unagi was a smoky silk that glided across the tongue. Today? A pale imitation. Flavours that once soared now stumble, leaving only nostalgia seasoned with disappointment. I do not return for mediocrity. My palate does not entertain decline. Standards have fallen, and with them, my patience.',
+                '1 Keong Saik Rd., #01-01, Singapore 089109',
+                'images/MoustacheBBQ.jpg'],
+            ['B3tter W0rld Caf3',
+                '2',
+                'Better Not',
+                'They call it affordable convenience. I call it slow palate erosion. A forkful here, a spoonful there, and suddenly I’m questioning my life choices. If food has a soul, this place served me a ghost. ',
+                '12 Marina Boulevard, Tower 3, Level 2 Marina Bay Financial Centre',
+                'images/BWC.jpg'
+            ],
+            ['Omnivore The Sail',
+                '3',
+                'An abomination',
+                'Someone took farm-to-table too literally. A caterpillar corpse on my plate, and management’s response was to hand me a coupon. Excuse me, this isn’t fast fashion. Vouchers don’t erase indignity. I don’t need discounts, I need standards. Clearly, they can’t afford them.',
+                '2 Marina Blvd, #B1-08, Singapore 018987',
+                'images/Omnivore.jpg'],           
+            ];
