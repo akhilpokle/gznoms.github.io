@@ -10,7 +10,7 @@ const yuck=[
                 'Better Not',
                 'They call it affordable convenience. I call it slow palate erosion. A forkful here, a spoonful there, and suddenly I’m questioning my life choices. If food has a soul, this place served me a ghost. ',
                 '12 Marina Boulevard, Tower 3, Level 2 Marina Bay Financial Centre',
-                'images/BWC.jpg'
+                'assets/BWC.jpg'
             ],
             ['Omnivore The Sail',
                 '3',
