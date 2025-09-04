@@ -17,5 +17,5 @@ const yuck=[
                 'An abomination',
                 'Someone took farm-to-table too literally. A caterpillar corpse on my plate, and management’s response was to hand me a coupon. Excuse me, this isn’t fast fashion. Vouchers don’t erase indignity. I don’t need discounts, I need standards. Clearly, they can’t afford them.',
                 '2 Marina Blvd, #B1-08, Singapore 018987',
-                'images/Omnivore.jpg'],           
+                'images/IMG_4900.jpeg'],           
             ];
