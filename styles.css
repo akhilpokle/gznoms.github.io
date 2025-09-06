@@ -62,7 +62,7 @@ body{
 }
 
 .loader_image{
-    width: 320px;
+    width: 120vw;
     height: auto;
     object-fit: cover;
 }
@@ -71,11 +71,10 @@ body{
     position: absolute;
     top: -100px;
     left: -10px;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(6, minmax(200px, 1fr));
-    grid-template-rows: repeat(3, minmax(300px, 1fr));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 /*Intro section*/
