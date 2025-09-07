@@ -62,7 +62,7 @@ body{
 }
 
 .loader_image{
-    width: 120vw;
+    min-width: 120vw;
     height: auto;
     object-fit: cover;
 }
@@ -1012,3 +1012,4 @@ body{
 #yucking_content{
     padding-bottom: 0px;
 }
+
